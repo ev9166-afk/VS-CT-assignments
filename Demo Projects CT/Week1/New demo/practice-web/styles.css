@@ -1,0 +1,41 @@
+.container {
+  border: 1px solid #2d17f0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: grey;
+  border-radius: 20px;
+  font-family: "Times New Roman", Times, serif;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.menu-items {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.menu-items li {
+  list-style: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: rgb(82, 32, 218);
+  color: aliceblue;
+  padding: 3px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px;
+  cursor: pointer;
+}
+.menu-items li a {
+  text-decoration: none;
+  color: white;
+}
