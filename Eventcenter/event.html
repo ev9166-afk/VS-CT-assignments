@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" class="stylesheet" />
+    <title>Emilio's party palace</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#" class="logo">Emilio's<span>PARTY</span>Palace</a>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="schedule">
+      <div class="calendar">
+        <h2 id="monthYear"></h2>
+        <div class="days">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="dates" id="dates"></div>
+      </div>
+
+      <script>
+        const today = new Date();
+        const month = today.getMonth();
+        const year = today.getFullYear();
+
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        document.getElementById(
+          "monthYear"
+        ).textContent = `${monthNames[month]} ${year}`;
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        const datesContainer = document.getElementById("dates");
+
+        // Empty slots before first day
+        for (let i = 0; i < firstDay; i++) {
+          datesContainer.appendChild(document.createElement("div"));
+        }
+
+        // Days of the month
+        for (let day = 1; day <= daysInMonth; day++) {
+          const dateDiv = document.createElement("div");
+          dateDiv.textContent = day;
+
+          if (
+            day === today.getDate() &&
+            month === today.getMonth() &&
+            year === today.getFullYear()
+          ) {
+            dateDiv.classList.add("today");
+          }
+
+          datesContainer.appendChild(dateDiv);
+        }
+      </script>
+    </section>
+
+    <section class="events">
+      <section class="Bookings">
+        <section class="contactus" id="contactus">
+          <div class="title">
+            <h2 class="titeText"><span>C</span>ontact Us</h2>
+          </div>
+          <form action="https://formspree.io/f/mpzegbrv" method="POST">
+            <div class="contactform">
+              <h3>Send Message</h3>
+              <p>Please include date and time of your event.</p>
+              <div class="inputbox">
+                <input type="text" placeholder="Name" name="name" required />
+              </div>
+              <div class="inputbox">
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  name="Phone Number"
+                  required
+                />
+              </div>
+              <div class="inputbox">
+                <input type="email" placeholder="Email" name="email" required />
+              </div>
+              <div class="inputbox">
+                <textarea
+                  placeholder="Message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <div class="inputbox">
+                <input type="submit" value="Send" />
+              </div>
+            </div>
+          </form>
+        </section>
+      </section>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/emilio-vasquez-8031551a6/"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            width="24"
+            height="24"
+          />
+        </a>
+
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/24/733/733579.png"
+            alt="Twitter"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
