@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript Fundamentals Quiz</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- QUIZ SCREEN -->
+    <div id="quizContainer">
+      <h1>JavaScript Fundamentals Quiz</h1>
+
+      <!-- Question text goes here -->
+      <h2 id="questionContainer"></h2>
+
+      <!-- Answer buttons get generated here -->
+      <div id="optionsContainer"></div>
+
+      <!-- Disabled until user answers -->
+      <button id="nextQuestion" disabled>Next Question</button>
+    </div>
+
+    <!-- SCORE SCREEN (hidden until quiz ends) -->
+    <div id="scoreContainer" style="display: none">
+      <h2>Quiz Completed!</h2>
+
+      <!-- Final score text goes here -->
+      <p id="score"></p>
+
+      <!-- Restart quiz -->
+      <button id="restartButton">Retake Quiz</button>
+    </div>
+
+    <!-- JS (defer so elements exist before JS runs) -->
+    <script src="main.js" defer></script>
+  </body>
+</html>

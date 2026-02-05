@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #cf6139;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #d23310;
+}
+
+#quizContainer,
+#scoreContainer {
+  background: linear-gradient(135deg, rgb(228, 89, 89), pink);
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
