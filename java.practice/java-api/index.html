@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" class="stylesheet" />
+    <title>My API Showcase</title>
+  </head>
+  <body>
+    <h1 class="main-title">Welcome to my API Showcase</h1>
+
+    <div class="grid-container">
+      <section class="box" id="dog-api">
+        <h2>Cute Dogs</h2>
+        <button class="bttn" id="single-dog-button">Dog Image</button>
+        <div id="single-dog-container"></div>
+      </section>
+
+      <section class="box" id="dictionary-api">
+        <h2>Doctionary</h2>
+        <input id="wordInput" type="text" placeholder="Type a word" />
+        <button class="bttn" id="wordSearchButton">Search Dictionary</button>
+        <div id="dictionary-container"></div>
+      </section>
+
+      <section class="box" id="weather-api">
+        <h2>Check the Weather</h2>
+        <input id="location" type="text" placeholder="Enter your location" />
+
+        <button class="bttn" id="weatherButton">Check The Weather</button>
+        <div id="weather-container"></div>
+      </section>
+
+      <section class="box" id="joke-api">
+        <h2>Joke Time</h2>
+        <button class="bttn" id="jokeButton">Tell me a Joke</button>
+        <div id="joke-container"></div>
+      </section>
+
+      <section class="box" id="currency-api">
+        <h2>Currency Exchange</h2>
+
+        <input id="fromCurrency" type="text" placeholder="From (USD)" />
+
+        <input id="toCurrency" type="text" placeholder="To (JPY)" />
+
+        <input id="amount" type="number" step="0.01 " placeholder="Amount" />
+
+        <button class="bttn" id="currencyButton">Convert</button>
+
+        <div id="currency-container"></div>
+      </section>
+
+      <section class="box" id="art-api">
+        <h2>Chicago Art</h2>
+        <button class="bttn" id="artButton">Learn About Art</button>
+        <div id="art-container"></div>
+      </section>
+
+      <section class="box" id="book-api">
+        <h2>Book Look-up</h2>
+        <input
+          class="book"
+          id="bookSearch"
+          type="text"
+          placeholder="Enter book title "
+        />
+        <button class="bttn" id="bookButton">Search for books</button>
+        <div id="book-container"></div>
+      </section>
+
+      <section class="box" id="git-api">
+        <h2>Git Users</h2>
+        <input
+          id="gitUser"
+          class="git"
+          type="text"
+          placeholder="Enter Git Username"
+        />
+        <button class="bttn" id="gitButton">Search for user</button>
+        <div id="git-container"></div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
